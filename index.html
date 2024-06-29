@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mocha</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
-  </head>
-  <body>
-    
-  </body>
+<head>
+  <title>Mocha Tests</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Mocha CSS for styling -->
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+</head>
+<body>
+  <!-- Container for displaying Mocha test results -->
+  <div id="mocha"></div>
+
+  <!-- Include Chai Assertion Library (if used in your tests) -->
+  <script src="node_modules/chai/chai.js"></script>
+
+  <!-- Include Mocha test framework -->
+  <script src="node_modules/mocha/mocha.js"></script>
+
+  <!-- Configure Mocha to use the BDD interface (optional) -->
+  <script>mocha.setup('bdd')</script>
+
+  <!-- Your test files to be included here -->
+  <script src="test/indexTest.js"></script>
+
+  <!-- Run the Mocha tests -->
+  <script>
+    mocha.run();
+  </script>
+</body>
 </html>
